@@ -29,81 +29,105 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            ButtonLeft = new Button();
+            ButtonRight = new Button();
+            ButtonUp = new Button();
+            ButtonDown = new Button();
+            PlayerCat = new PictureBox();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)PlayerCat).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.Controls.Add(PlayerCat);
             panel1.Location = new Point(174, 40);
             panel1.Name = "panel1";
             panel1.Size = new Size(455, 246);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
-            // button1
+            // ButtonLeft
             // 
-            button1.Location = new Point(439, 363);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            ButtonLeft.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            ButtonLeft.Location = new Point(472, 377);
+            ButtonLeft.Name = "ButtonLeft";
+            ButtonLeft.Size = new Size(94, 29);
+            ButtonLeft.TabIndex = 0;
+            ButtonLeft.Text = "LEFT";
+            ButtonLeft.UseVisualStyleBackColor = true;
+            ButtonLeft.Click += ButtonLeft_Click;
             // 
-            // button2
+            // ButtonRight
             // 
-            button2.Location = new Point(629, 363);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            ButtonRight.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            ButtonRight.Location = new Point(662, 377);
+            ButtonRight.Name = "ButtonRight";
+            ButtonRight.Size = new Size(94, 29);
+            ButtonRight.TabIndex = 1;
+            ButtonRight.Text = "RIGHT";
+            ButtonRight.UseVisualStyleBackColor = true;
+            ButtonRight.Click += ButtonRight_Click;
             // 
-            // button3
+            // ButtonUp
             // 
-            button3.Location = new Point(535, 313);
-            button3.Name = "button3";
-            button3.Size = new Size(94, 29);
-            button3.TabIndex = 2;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            ButtonUp.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            ButtonUp.Location = new Point(568, 342);
+            ButtonUp.Name = "ButtonUp";
+            ButtonUp.Size = new Size(94, 29);
+            ButtonUp.TabIndex = 2;
+            ButtonUp.Text = "UP";
+            ButtonUp.UseVisualStyleBackColor = true;
+            ButtonUp.Click += ButtonUp_Click;
             // 
-            // button4
+            // ButtonDown
             // 
-            button4.Location = new Point(535, 409);
-            button4.Name = "button4";
-            button4.Size = new Size(94, 29);
-            button4.TabIndex = 3;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            ButtonDown.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            ButtonDown.Location = new Point(568, 377);
+            ButtonDown.Name = "ButtonDown";
+            ButtonDown.Size = new Size(94, 29);
+            ButtonDown.TabIndex = 3;
+            ButtonDown.Text = "DOWN";
+            ButtonDown.UseVisualStyleBackColor = true;
+            ButtonDown.Click += ButtonDown_Click;
+            // 
+            // PlayerCat
+            // 
+            PlayerCat.Image = Properties.Resources.cot;
+            PlayerCat.Location = new Point(114, 39);
+            PlayerCat.Name = "PlayerCat";
+            PlayerCat.Size = new Size(226, 176);
+            PlayerCat.SizeMode = PictureBoxSizeMode.StretchImage;
+            PlayerCat.TabIndex = 0;
+            PlayerCat.TabStop = false;
+            PlayerCat.Paint += PlayerCat_Paint;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(ButtonDown);
+            Controls.Add(ButtonUp);
+            Controls.Add(ButtonRight);
+            Controls.Add(ButtonLeft);
             Controls.Add(panel1);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)PlayerCat).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button ButtonLeft;
+        private Button ButtonRight;
+        private Button ButtonUp;
+        private Button ButtonDown;
+        private PictureBox PlayerCat;
     }
 }

@@ -21,10 +21,6 @@ namespace RougueLike
                 for (int y = 0; y < height; y++)
                 {
                     map[x, y] = (x > 0 && x < width - 1 && y > 0 && y < height - 1) ? '.' : '#';
-                    if (x == y)
-                    {
-                        map[x, y] = '#';
-                    }
                 }
             }
         }
